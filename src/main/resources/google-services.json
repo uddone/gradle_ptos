@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "657817857810",
+    "project_id": "gsil-beit",
+    "storage_bucket": "gsil-beit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657817857810:android:c27455042f8958248e4dcb",
+        "android_client_info": {
+          "package_name": "com.gsil.projects"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657817857810-9oq1h8avqfa1p0g103jj1695900bdifg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd2KlqHo4A67Ce4KkUSIUrF9Ki3vn9nyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657817857810-9oq1h8avqfa1p0g103jj1695900bdifg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

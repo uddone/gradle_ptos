@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    
+    <!-- log file path --> 
+    <property name="LOG_PATH" value="log"/>
+    <!-- <property name="LOG_PATH" value="/log"/> -->
+    <!-- log file name --> 
+    <!-- <property name="LOG_FILE_NAME" value="${log.config.filename}"/> -->
+    <property name="LOG_FILE_NAME" value="dev_log"/> 
+    <!-- err log file name --> 
+    <property name="ERR_LOG_FILE_NAME" value="err_log"/> 
+    <!-- pattern --> 
+    <property name="LOG_PATTERN" value="%highlight(%-5level) %d{yy-MM-dd HH:mm:ss} [%thread] [%logger{30}:%line] - %msg%n"/>
+
+    <!-- Console Appender -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>52.79.239.20:5044</destination>
+        <filter class="com.gsil.util.LoggerFilter"/>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"></encoder>
+    </appender>
+
+<!--    <logger name="springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator">-->
+<!--        <level value="ERROR" />-->
+<!--    </logger>-->
+<!--    <logger name="org.springframework.integration.endpoint.EventDrivenConsumer">-->
+<!--        <level value="ERROR" />-->
+<!--    </logger>-->
+<!--    <logger name="org.springframework.data.repository.config.RepositoryConfigurationDelegate">-->
+<!--        <level value="ERROR" />-->
+<!--    </logger>-->
+
+    <root level="INFO">
+        <appender-ref ref="console" />
+        <appender-ref ref="LOGSTASH" />
+    </root>
+</configuration>
