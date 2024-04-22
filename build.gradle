@@ -29,6 +29,8 @@ dependencies {
 	implementation 'org.slf4j:slf4j-api:2.0.9'
 	implementation 'mysql:mysql-connector-java:8.0.28'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation("io.github.cdimascio:dotenv-java:3.0.0")
+
 }
 
 tasks.named('test') {
