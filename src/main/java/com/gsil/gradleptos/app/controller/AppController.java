@@ -36,7 +36,7 @@ public class AppController {
     @Operation(summary = "홍비매니저님", description = "인텔리제이에서 ")
     @GetMapping("/haha")
     public String gradle() {
-        return "깃허브 테스트";
+        return "깃허브 테스트 두번째";
     }
 
 }
