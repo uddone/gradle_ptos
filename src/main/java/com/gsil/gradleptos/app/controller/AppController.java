@@ -33,4 +33,10 @@ public class AppController {
         return "gradle!@";
     }
 
+    @Operation(summary = "홍비매니저님", description = "인텔리제이에서 ")
+    @GetMapping("/haha")
+    public String gradle() {
+        return "깃허브 테스트";
+    }
+
 }
